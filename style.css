@@ -24,7 +24,7 @@ body {
 
 
 .infoField{
-  width: 600px;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -105,6 +105,7 @@ body {
 
 #projectSection {
   margin-top: 160px;
+
   border: 1px solid hsl(201, 19%, 47%);
   background-color: hsl(201, 19%, 47%);
   display: flex;
@@ -114,6 +115,7 @@ body {
 .img1, .img2, .img3{
   border-radius: 15px;
   cursor: pointer;
+  height: 150px;
 }
 
 .img1:hover, .img2:hover , .img3:hover {
@@ -198,6 +200,9 @@ html {
   scroll-behavior: smooth;
 }
 
+.menu{
+  display: none;
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -221,11 +226,103 @@ html {
   background: hsl(201, 19%, 47%); 
 }
 
-.transition-fade{
-  opacity: 1;
-  transition: 500ms;
+@media (max-width: 900px) and (min-width: 750px){
+  .infoField{
+    width: 600px;
+  }
+  .nav_bar{
+    gap: 310px;
+  }
+
+  header{
+    border: 1px solid black;
+    width: 915px;
+  }
+
 }
 
-html.is-animating .transition-fade {
-  opacity: 0;
+@media (min-width: 901px) and (max-width: 1280px){
+  .nav_bar{
+    gap: 60px;
+  }
+  .img1, .img2, .img3{
+    height: 120px;
+  }
+}
+
+
+
+@media only screen and (max-width: 430px){
+  .firstRow{
+    display: flex;
+    flex-direction: column;
+  }
+  .boldPara {
+    font-size: 10px;
+  }
+   .infoField{
+     display: none;
+   }
+
+  .brandLogo{
+    width: 100%;
+    display: flex;
+    margin-left: 15px;
+  }
+
+   .menu{
+     display: block;
+     margin-left: 75%;
+     margin-top: 5px;
+   }
+
+   #projectSection{
+     margin-top: 15%;
+     width: 100%;
+   }
+  
+   .project1 , .project2, .project3{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+
+   .project1 h3, .project2 h3, .project3 h3{
+     margin-top: 0px;
+   }
+
+   .active{
+     flex-direction: column;
+     width: 60%;
+     border: 1px solid black;
+     position: absolute;
+     z-index: 1;
+     margin-left: 45%;
+     background-color: white;
+     margin-top: 0px;
+   }
+   .navbar_btn{
+    margin-bottom: 100vh;
+   }
+   .close{
+     display: none;
+     margin-top: 10px;
+     margin-left: 70%;
+   }
+   .navbar_btn{
+    margin-bottom: 100vh;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 10px;
+    width: 130px;
+   }
+
+   .myBlog , .myProjects {
+     margin-top: 15px;
+   }
+}
+
+#close, .closeimg{
+  display: none;
 }

@@ -77,3 +77,22 @@ h1{
 p{
     font-family: 'Epilogue', sans-serif;
 }
+
+@media only screen and (max-width: 430px){
+    section{
+        grid-template-columns: 1fr;
+    }
+
+    .image-part{
+        margin-top: 70px;
+    }
+    .text-part{
+        line-height: 1.7em;
+    }
+    .heading{
+        margin-top: 30px;
+    }
+    .para{
+        margin-top: 30px;
+    }
+}
